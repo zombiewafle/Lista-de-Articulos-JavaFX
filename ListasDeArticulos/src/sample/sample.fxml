@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane id="boughtButton" alignment="center" hgap="10" prefHeight="253.0" prefWidth="403.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<GridPane id="boughtButton" alignment="center" hgap="10" prefHeight="293.0" prefWidth="498.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <columnConstraints>
       <ColumnConstraints />
    </columnConstraints>
@@ -19,18 +19,21 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <ListView id="List View of Created Lists" prefHeight="149.0" prefWidth="380.0" GridPane.rowIndex="1">
-         <padding>
-            <Insets left="2.0" right="2.0" />
-         </padding>
-      </ListView>
-      <Button id="Bought Button" mnemonicParsing="false" text="Comprado" translateX="300.0" GridPane.rowIndex="2" />
-      <Button id="Pending Button" mnemonicParsing="false" prefWidth="70.0" text="Pendiente" translateX="220.0" GridPane.rowIndex="2" />
-      <Label prefHeight="51.0" prefWidth="213.0" text="Mis Listas:">
+      <Button id="Bought Button" fx:id="boughtButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Bought" translateX="370.0" GridPane.rowIndex="2" />
+      <Button id="Pending Button" fx:id="unfinishedButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="86.0" text="Unfinished" translateX="280.0" GridPane.rowIndex="2" />
+      <Label prefHeight="61.0" prefWidth="235.0" text="My Lists: ">
          <font>
             <Font name="Comic Sans MS" size="36.0" />
          </font>
       </Label>
-      <Button id="New List Button" mnemonicParsing="false" text="Nueva Lista" translateX="300.0" />
+      <Button id="New List Button" fx:id="newList" mnemonicParsing="false" text="New List" translateX="370.0" />
+      <TableView fx:id="myListsTableView" prefHeight="191.0" prefWidth="455.0" GridPane.rowIndex="1">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="116.0" text="Name" />
+          <TableColumn fx:id="dateColumn" prefWidth="128.0" text="Date" />
+            <TableColumn fx:id="unfinishedColumn" prefWidth="97.0" text="Unfinished" />
+            <TableColumn fx:id="estimatedColumn" prefWidth="112.0" text="Estimated" />
+        </columns>
+      </TableView>
    </children>
 </GridPane>
