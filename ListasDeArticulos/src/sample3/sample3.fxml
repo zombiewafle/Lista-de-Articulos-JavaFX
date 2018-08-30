@@ -19,41 +19,41 @@
         <RowConstraints maxHeight="130.0" minHeight="10.0" prefHeight="159.0" vgrow="SOMETIMES" />
     </rowConstraints>
    <children>
-      <Button mnemonicParsing="false" text="&lt;--" translateX="40.0" translateY="10.0" />
-      <Label prefHeight="51.0" prefWidth="348.0" text="New Item:" translateX="100.0" translateY="10.0">
+      <Button fx:id="exitbtn" mnemonicParsing="false" onAction="#OpenNuevaLista4" text="&lt;--" translateX="40.0" translateY="10.0" />
+      <Label fx:id="lblNewItem" prefHeight="51.0" prefWidth="348.0" text="New Item:" translateX="100.0" translateY="10.0">
          <font>
             <Font name="Comic Sans MS" size="36.0" />
          </font>
       </Label>
-      <Label prefHeight="21.0" prefWidth="64.0" text="Name:" translateX="40.0" translateY="-30.0" GridPane.rowIndex="1">
+      <Label fx:id="lblName" prefHeight="21.0" prefWidth="64.0" text="Name:" translateX="40.0" translateY="-60.0" GridPane.rowIndex="1">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label text="Quantity:" translateX="40.0" translateY="10.0" GridPane.rowIndex="1">
+      <Label fx:id="lblQuantity" text="Quantity:" translateX="40.0" translateY="-10.0" GridPane.rowIndex="1">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label prefHeight="21.0" prefWidth="71.0" text="Prize:" translateX="40.0" translateY="50.0" GridPane.rowIndex="1">
+      <Label fx:id="lblPrice" prefHeight="21.0" prefWidth="71.0" text="Price:" translateX="40.0" translateY="50.0" GridPane.rowIndex="1">
          <font>
             <Font size="15.0" />
          </font></Label>
-      <TextField prefHeight="25.0" prefWidth="444.0" translateX="-80.0" translateY="-30.0" GridPane.rowIndex="1">
+      <TextField fx:id="nameTextField" prefHeight="25.0" prefWidth="444.0" translateX="-80.0" translateY="-60.0" GridPane.rowIndex="1">
          <GridPane.margin>
             <Insets left="200.0" right="30.0" />
          </GridPane.margin>
       </TextField>
-      <TextField translateX="-80.0" translateY="10.0" GridPane.rowIndex="1">
+      <TextField fx:id="quantityTextFiield" translateX="-80.0" translateY="-10.0" GridPane.rowIndex="1">
          <GridPane.margin>
             <Insets left="200.0" right="30.0" />
          </GridPane.margin>
       </TextField>
-      <TextField translateX="-80.0" translateY="50.0" GridPane.rowIndex="1">
+      <TextField fx:id="priceTextField" translateX="-80.0" translateY="50.0" GridPane.rowIndex="1">
          <GridPane.margin>
             <Insets left="200.0" right="30.0" />
          </GridPane.margin>
       </TextField>
-      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Create" translateX="500.0" GridPane.rowIndex="2" />
+      <Button fx:id="createButton" mnemonicParsing="false" onAction="#OpenNuevaLista4" prefHeight="25.0" prefWidth="94.0" text="Create" translateX="400.0" GridPane.rowIndex="2" />
    </children>
 </GridPane>

@@ -20,38 +20,38 @@
         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     </rowConstraints>
    <children>
-      <Button mnemonicParsing="false" text="&lt;--" translateX="20.0" />
-      <Label prefHeight="51.0" prefWidth="348.0" text="Nombre de la Lista:" translateX="75.0">
+      <Button fx:id="exitbutton" mnemonicParsing="false" text="&lt;--" translateX="20.0" />
+      <Label fx:id="lblNombreLista" prefHeight="51.0" prefWidth="348.0" text="Nombre de la Lista:" translateX="75.0">
          <font>
             <Font name="Comic Sans MS" size="36.0" />
-         </font>
+         </font>exitButton
       </Label>
-      <Button mnemonicParsing="false" text="+ Item" translateX="500.0" />
-      <Label prefHeight="96.0" prefWidth="535.0" text="Descripcion de la lista" textAlignment="JUSTIFY" translateX="15.0" GridPane.rowIndex="1" />
-      <Label prefHeight="28.0" prefWidth="68.0" text="Mark as: " translateX="300.0" GridPane.rowIndex="3">
+      <Button fx:id="btnNuevoItem" mnemonicParsing="false" onAction="#OpenNuevaLista3" text="+ Item" translateX="500.0" />
+      <Label fx:id="lblDescripcion" prefHeight="96.0" prefWidth="535.0" text="Descripcion de la lista" textAlignment="JUSTIFY" translateX="15.0" GridPane.rowIndex="1" />
+      <Label fx:id="lblMark" prefHeight="28.0" prefWidth="68.0" text="Mark as: " translateX="300.0" GridPane.rowIndex="3">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Button mnemonicParsing="false" text="Unfinished" translateX="405.0" GridPane.rowIndex="3" />
-      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Bought" translateX="500.0" GridPane.rowIndex="3" />
-      <Label text="Unfinished:" translateX="30.0" GridPane.rowIndex="3">
+      <Button fx:id="btnUnfinished" mnemonicParsing="false" text="Unfinished" translateX="405.0" GridPane.rowIndex="3" />
+      <Button fx:id="btnBought" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Bought" translateX="500.0" GridPane.rowIndex="3" />
+      <Label fx:id="lblUnfinished" text="Unfinished:" translateX="30.0" GridPane.rowIndex="3">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <Label id="Total de articulos pendientes" translateX="170.0" GridPane.rowIndex="3">
+      <Label id="Total de articulos pendientes" fx:id="lblNumUnfinished" translateX="170.0" GridPane.rowIndex="3">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <TableView prefHeight="171.0" prefWidth="600.0" GridPane.rowIndex="2">
+      <TableView fx:id="mySecondTableView" prefHeight="171.0" prefWidth="600.0" GridPane.rowIndex="2">
         <columns>
-          <TableColumn prefWidth="123.0" text="Items" />
-          <TableColumn prefWidth="126.0" text="Quantity" />
-            <TableColumn prefWidth="101.0" text="Unitary" />
-            <TableColumn prefWidth="167.0" text="Total" />
-            <TableColumn text="Status" />
+          <TableColumn fx:id="itemsCol" prefWidth="123.0" text="items" />
+          <TableColumn fx:id="quantityCol" prefWidth="126.0" text="Quantity" />
+            <TableColumn fx:id="unitaryCol" prefWidth="101.0" text="Unitary" />
+            <TableColumn fx:id="totalCol" prefWidth="167.0" text="Total" />
+            <TableColumn fx:id="statusCol" text="Status" />
         </columns>
       </TableView>
    </children>

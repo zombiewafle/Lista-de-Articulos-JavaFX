@@ -19,18 +19,18 @@
         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     </rowConstraints>
-    <Button mnemonicParsing="false" text="&lt;--" translateX="30.0" translateY="10.0" />
-    <Label text="New List:" translateX="100.0">
+    <Button fx:id="exit" mnemonicParsing="false" onAction="#OpenNuevaLista1" text="&lt;--" translateX="30.0" translateY="10.0" />
+    <Label fx:id="lblNewList" text="New List:" translateX="100.0">
         <font>
           <Font name="Comic Sans MS" size="36.0" />
         </font>
     </Label>
-    <Label prefHeight="20.0" prefWidth="61.0" text="Name:" translateX="30.0" translateY="-30.0" GridPane.rowIndex="1">
+    <Label fx:id="lblName" prefHeight="20.0" prefWidth="61.0" text="Name:" translateX="30.0" translateY="-30.0" GridPane.rowIndex="1">
         <font>
           <Font size="14.0" />
         </font>
     </Label>
-    <Label text="Description:" translateX="30.0" translateY="10.0" GridPane.rowIndex="1">
+    <Label fx:id="lblDescrip" text="Description:" translateX="30.0" translateY="10.0" GridPane.rowIndex="1">
         <font>
           <Font size="14.0" />
         </font>
@@ -48,7 +48,7 @@
           <Insets bottom="-4.0" left="30.0" right="150.0" top="30.0" />
         </GridPane.margin>
     </TextArea>
-    <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="29.0" prefWidth="59.0" text="Crear" textAlignment="CENTER" translateX="450.0" translateY="10.0" GridPane.rowIndex="2">
+    <Button fx:id="createButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#OpenNuevaLista2" prefHeight="29.0" prefWidth="59.0" text="Create" textAlignment="CENTER" translateX="450.0" translateY="10.0" GridPane.rowIndex="2">
       <padding>
          <Insets bottom="10.0" right="20.0" />
       </padding>
